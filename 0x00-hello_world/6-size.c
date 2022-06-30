@@ -1,7 +1,3 @@
-6
-
-
-
 #include <stdio.h>
 
 /**
