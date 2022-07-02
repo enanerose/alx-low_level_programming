@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-include <stdio.h>
+#include <stdio.h>
 /**
  * main - program entry point
  * Description : A program to determine wether an int is +ve, -ve or 0
