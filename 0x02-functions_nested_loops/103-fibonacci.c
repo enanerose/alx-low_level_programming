@@ -15,7 +15,9 @@ int main(void)
 	long int next;
 	long int prev = 1;
 	long int current = 1;
+
 	while (current < 4000000)
+
 	{
 		next = current + prev;
 		if (current % 2 == 0)
@@ -23,6 +25,7 @@ int main(void)
 		prev = current;
 		current = next;
 	}
+
 	printf("%d\n", sum);
 	return (0);
 }
