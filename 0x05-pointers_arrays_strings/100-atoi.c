@@ -31,10 +31,12 @@ int _num_id(char *s)
 {
 
 	int i;
+
 	for (i = 0; i < _strlen(s); i++)
 
 	{
 		if (s[i] >= '0' && s[i] <= '9')
+
 			return (i);
 	}
 
@@ -89,6 +91,7 @@ int _atoi(char *s)
 	int digit = (_num_id(s));
 
 	if (_start_id < 0) /* if no digits found, exit program */
+
 		return (0);
 
 	sign = find_sign(s);
