@@ -1,31 +1,38 @@
 #include "main.h"
-
-
+#include <stdlib.h>
 
 /**
- * _memset - pointers
- * @s: array of char 
- * @b: char
- * @n: int
- * Return: char string
+ * create_array - function that creates an array of chars
+ * @c: char
+ * @size: size of matrix
+ * Description: creates an array of chars.
+ * Return: pointer to char
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *create_array(unsigned int size, char c)
 
 {
 
+char *arreglo;
 
+unsigned int i;
 
-	unsigned int i;
-
-
-
-	for (i = 0 ; i < n ; i++)
-
-		s[i] = b;
+arreglo =  malloc(size * sizeof(char));
 
 
 
-	return (s);
+if (size == 0 || arreglo == NULL)
+
+return (NULL);
+
+
+
+for (i = 0 ; i < size ; i++)
+
+arreglo[i] = c;
+
+
+
+return (arreglo);
 
 }
