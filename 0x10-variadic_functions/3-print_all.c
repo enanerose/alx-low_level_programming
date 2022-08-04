@@ -85,29 +85,19 @@ void print_all(const char * const format, ...)
 	opt_t print[] = {
 
 		{"c", print_char},
-
 		{"i", print_int},
-
 		{"f", print_float},
-
 		{"s", print_string},
-
 		{NULL, NULL}
-
 	};
 
 
-
 	va_list params;
-
 	int i, j;
-
 	char *sep = "";
 
 
-
 	va_start(params, format);
-
 	i = 0;
 
 	while (format && *(format + i))
@@ -115,33 +105,22 @@ void print_all(const char * const format, ...)
 	{
 
 		j = 0;
-
 		while (print[j].opt && (*(print[j].opt) != *(format + i)))
 
 			j++;
 
 
-
 		if (print[j].opt)
 
 		{
-
 			printf("%s", sep);
-
 			print[j].meth(params);
-
 			sep = ", ";
-
 		}
-
 		i++;
 
 	}
 
-
-
 	va_end(params);
-
 	printf("\n");
-
 }
